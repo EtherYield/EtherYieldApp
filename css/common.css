@@ -19,6 +19,10 @@ body * {
     font-family: Kanit;
 }
 
+.count-down {
+    transform: scale(0.8);
+}
+
 .justify-content-evenly {
     justify-content: space-evenly !important;
     grid-gap: 3%;
@@ -492,16 +496,22 @@ body * {
     margin-top: 10px;
 }
 
+.stake-div>div {
+    color: white;
+    display: inline-block;
+    padding-right: 20px;
+}
+
 .stake-div .amount {
     line-height: 52px;
     border-radius: 16px;
     border: none;
     width: 280px;
-    color: #ffffff;
     text-indent: 1em;
     outline: none !important;
     border: 1px solid #fdcfa8 !important;
     background: transparent;
+    color: white;
 }
 
 .stake-div .amount::placeholder {

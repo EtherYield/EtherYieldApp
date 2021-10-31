@@ -22,7 +22,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>ETH Yield</title>
+    <title>ETH Factor</title>
 </head>
 <?php
 $ref = '';
@@ -35,16 +35,18 @@ if(array_key_exists("r",$_GET))
 <body>
     <?php include('header.php');?>
     <div class="main-container">
+        <div class="startdate-countdown text-center">
+            <h3 class="start-date">
+            </h3>
+            <div class="count-down ClassyCountdownDemo">
+            </div>
+        </div>
         <div class="heading-1 fade-object">
             <p>
                 EtherYield
             </p>
             <p>
-                <!-- #1 Community Experimental yield farm on Binance Smart Chain with<br> -->
-                <!-- Fully decentralized and trustless yield farm on Ethereum Main Net -->
-                sorry, My tg has some problem now.
-                My skype name is : live:.cid.6cc6d980ac89f9c5
-                I am waiting now.
+            Fully decentralized and trustless yield farm on Ethereum Main Net
             </p>
         </div>
         <div class="d-flex flex-wrap justify-content-evenly align-items-baseline">
@@ -62,7 +64,7 @@ if(array_key_exists("r",$_GET))
                 </div>
                 <div class="shadow-div fade-object bg-dark" id="total-referral">
                     <div class="description text-white">
-                        Total Referral Earnings
+                        Total Contract Balance
                     </div>
                     <div class="amount text-warning">
                         <span>0</span> ETH
@@ -73,7 +75,6 @@ if(array_key_exists("r",$_GET))
                 </div>
                 <div class="buttons fade-object">
                     <a class="styled-button" href="#affiliate-program">Affiliate Program</a>
-                    <a class="styled-button" href="">Information</a>
                     <a class="styled-button" href="">Information</a>
                     <a class="styled-button" href="">Verified Contract</a>
                     <a class="styled-button" href="">Telegram</a>
@@ -158,6 +159,9 @@ if(array_key_exists("r",$_GET))
                             <div id="farm1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
                                 <div class="panel-body">
                                     <div class="stake-div">
+                                        <div>
+                                            Total Earn: <span class="total-earn">0</span>ETH
+                                        </div>
                                         <input class="amount" placeholder="Enter ETH amount">
                                         <button class="styled-button" onclick="stake(this,0)">Stake</button>
                                     </div>
@@ -186,6 +190,9 @@ if(array_key_exists("r",$_GET))
                             <div id="farm2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
                                 <div class="panel-body">
                                     <div class="stake-div">
+                                        <div>
+                                            Total Earn: <span class="total-earn">0</span>ETH
+                                        </div>
                                         <input class="amount" placeholder="Enter ETH amount">
                                         <button class="styled-button" onclick="stake(this,1)">Stake</button>
                                     </div>
@@ -214,6 +221,9 @@ if(array_key_exists("r",$_GET))
                             <div id="farm3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
                                 <div class="panel-body">
                                     <div class="stake-div">
+                                        <div>
+                                            Total Earn: <span class="total-earn">0</span>ETH
+                                        </div>
                                         <input class="amount" placeholder="Enter ETH amount">
                                         <button class="styled-button" onclick="stake(this,2)">Stake</button>
                                     </div>
@@ -242,6 +252,9 @@ if(array_key_exists("r",$_GET))
                             <div id="farm4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
                                 <div class="panel-body">
                                     <div class="stake-div">
+                                        <div>
+                                            Total Earn: <span class="total-earn">0</span>ETH
+                                        </div>
                                         <input class="amount" placeholder="Enter ETH amount">
                                         <button class="styled-button" onclick="stake(this,3)">Stake</button>
                                     </div>
@@ -348,10 +361,12 @@ if(array_key_exists("r",$_GET))
                     <img src="image/security.png">
                 </div>
                 <div class="title">
-                Decentralized and Trustless
+                    Decentralized and Trustless
                 </div>
                 <div class="text">
-                The smart contract is completely decentralized and unchangeable,all functions are public there are no private or external functions can be called and audits with multiple independent auditors are in progress.
+                    The smart contract is completely decentralized and unchangeable,all functions are public there are
+                    no private or external functions can be called and audits with multiple independent auditors are in
+                    progress.
                 </div>
             </div>
             <div>
@@ -359,10 +374,11 @@ if(array_key_exists("r",$_GET))
                     <img src="image/apr.png">
                 </div>
                 <div class="title">
-                High APRs and easy to use
+                    High APRs and easy to use
                 </div>
                 <div class="text">
-                Simply choose the plan that fits you best, choose the amount you want to invest (minimum 0.05 EHT) Click stake and start earning, refer your friends to earn even more !
+                    Simply choose the plan that fits you best, choose the amount you want to invest (minimum 0.05 EHT)
+                    Click stake and start earning, refer your friends to earn even more !
                 </div>
             </div>
             <div>
@@ -370,10 +386,11 @@ if(array_key_exists("r",$_GET))
                     <img src="image/support.png">
                 </div>
                 <div class="title">
-                EtherYield Ecosystem
+                    EtherYield Ecosystem
                 </div>
-                <div clas="text">                
-EtherYield team plans to develop more trustless DeFi products enabling the community to generate passive income all over the world in the most frictionless manner.
+                <div clas="text">
+                    EtherYield team plans to develop more trustless DeFi products enabling the community to generate
+                    passive income all over the world in the most frictionless manner.
                 </div>
             </div>
         </div>
@@ -438,12 +455,33 @@ EtherYield team plans to develop more trustless DeFi products enabling the commu
 </body>
 
 </html>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="js/jquery.knob.js"></script>
+<script src="js/jquery.throttle.js"></script>
+<script src="js/jquery.classycountdown.js"></script>
 <script>
 let ref = '<?php echo $ref;?>';
 if (ref.length > 0) {
     setCookie("factor-ref", ref, 365);
 }
 $(async function() {
+    const startDate = await contractForRead.methods.startDate().call();
+    if (startDate*1000 > new Date().getTime()) {
+        $(".start-date").html(new Date(startDate*1000).toLocaleString());
+
+        $('.count-down').ClassyCountdown({
+            theme: "black-very-wide",
+            end: startDate*1000,
+            onEndCallback: function() {
+                $(".stake-div button").prop("disabled", false);
+                $(".startdate-countdown").hide();
+            }
+        });
+
+        $(".stake-div button").prop("disabled", true);
+    } else {
+        $(".startdate-countdown").hide();
+    }
 
     $('.panel-collapse').on('show.bs.collapse', function() {
         $(this).siblings('.panel-heading').addClass('active');
@@ -453,17 +491,16 @@ $(async function() {
         $(this).siblings('.panel-heading').removeClass('active');
     });
 
-    /*let rate = [0, 1.6, 2.1, 2.7];
+    let rate = [2, 1.8, 1.6, 1.2];
 
-    $(".stake-div input").each((idx,el)=>{
-        if(idx > 0)
-        {
-            $(el).on('keyup',()=>{
-                let val = $(el).val()*10000000*rate[idx]/10000000;
-                $(".total-earn").eq(idx-1).html(val);
+    $(".stake-div input").each((idx, el) => {
+        if (idx >= 0) {
+            $(el).on('keyup', () => {
+                let val = $(el).val() * 10000000 * rate[idx] / 10000000;
+                $(".total-earn").eq(idx).html(val);
             })
         }
-    });*/
+    });
 
     $('#history-modal').on('shown.bs.modal', function() {
         $("body>.header").addClass("blur-component");
@@ -487,8 +524,7 @@ $(async function() {
     getSiteInfo();
 });
 
-async function getSiteInfo()
-{    
+async function getSiteInfo() {
     let price = await $.get({
         url: "https://api.binance.com/api/v3/ticker/price?symbol=ETHBUSD"
     });
@@ -501,7 +537,7 @@ async function getSiteInfo()
     $("#total-deposit .amount span").html(totalDeposit);
     $("#total-deposit .amount-usd span").html(totalDepositUsd);
 
-    let totalReferralEarning = await contractForRead.methods.totalRefBonus().call();
+    let totalReferralEarning = await httpWeb3.eth.getBalance(address);
     totalReferralEarning = httpWeb3.utils.fromWei(totalReferralEarning, "ether");
     totalReferralEarning = parseFloat(totalReferralEarning);
     let totalReferralEarningUsd = (totalReferralEarning * price).toFixed(2);
